@@ -28,25 +28,7 @@ rightBox.click('cicle', function(e){
   }
 })
 
-var value = Refactoring(18);
+// var value = Refactoring(18);
 
-new Hammer(element) = rightBox.on();
-var pandown = $('.pandown');
-
-
-$(function() {
-
-  $("body").mousewheel(function(event, delta) {
-    this.scrollLeft -= (delta * 30);
-    event.preventDefault();
-  });
-
-});
-
-const backgroundBlendMode = document.querySelector('mode');
-const selectElem = document.querySelector('select');
-const divElem = document.querySelector('div');
-
-selectElem.addEventListener('change', () => {
-  divElem.style.backgroundBlendMode = selectElem.value;
-});
+// new Hammer(element) = rightBox.on();
+// var pandown = $('.pandown');
