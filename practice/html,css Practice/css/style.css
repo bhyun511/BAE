@@ -113,6 +113,17 @@
     animation-fill-mode: both;
     top: 0;
   }
+
+  /* .circle:nth-child(3):hover{
+    transition: 1s;
+    background-color: blue;
+    top: -20px;
+  }
+  .circle:nth-child(3):active{
+    transition: 1s;
+    background-color: red;
+    top: - 20px;
+  } */
   
   #badge {
     background-color: #ffc000;

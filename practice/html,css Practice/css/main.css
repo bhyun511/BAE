@@ -17,7 +17,6 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
   font-weight: 400;
   line-height: 1;
 }
@@ -28,16 +27,6 @@ h1 {
 
 h2 {
   font-size: 24px;
-}
-
-p {
-  margin: 0;
-}
-
-ul,
-li {
-  margin: 0;
-  padding: 0;
 }
 
 li {
@@ -88,8 +77,6 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
-  left: 0;
-  top: 0;
   transition: 0.2s;
 }
 
@@ -103,11 +90,10 @@ button {
 }
 
 .gnb {
-  /* width: 100%; */
+  width: 100%;
   height: 72px;
-  position: fixed;
   bottom: 0;
-  left: 0;
+  position: fixed;
   background-color: #394952;
   box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.08);
   box-sizing: border-box;
@@ -126,4 +112,9 @@ button {
 
 .gnb .active {
   opacity: 1;
+}
+
+.gnb img{
+  width: auto;
+  height: auto;
 }
