@@ -29,13 +29,19 @@ header nav .center .menu li a {color: #ffffff; font-family: 'Montserrat', sans-s
 header nav .right {float: right; margin-top: calc(100vw * 10 /1920); margin-right: calc(100vw * 10 /1920);}
 header nav .right ul {display: flex;}
 header nav .right ul li {margin-left: calc(100vw * 20 /1920);}
+header nav .right ul li a {text-align: center; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 16 /1920); font-weight: 400; line-height:calc(100vw * 24 / 1920); color:#ffffff; text-decoration: underline;}
 header nav .right .login img {width:calc(100vw * 24 /1920); height: calc(100vw * 26 /1920);}
 header nav .right .alarm img {margin-top: calc(100vw * -2 /1920); width:calc(100vw * 25 /1920); height: calc(100vw * 28 /1920);}
+
+.fixchat {float: right; margin-right: calc(100vw * 105 /1920); }
+.fixchat .img {padding-top: calc(100vw * 850 / 1920); position: fixed; z-index: 100;}
+.fixchat .img img {width:calc(100vw * 84.85 /1920); height: calc(100vw * 84.85 /1920);}
+
 
 /* ---- section1 ---- */
 #section1 .banner{overflow:hidden;position:relative;width:100%;height:100%; z-index: 0;}
 #section1 .banner .banner-item{display:-webkit-box;display:-ms-flex;display:flex;position:relative;float:left;width:calc(100% / 6);height:100%;-webkit-box-orient:vertical;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
-#section1 .banner .image-area{position:absolute;width:100%;height:100%}
+#section1 .banner .image-area{position:absolute;width:100%;}
 #section1 .banner .image-area .mainVideo {width: 100%; height: calc(100vw * 1080 / 1920); display:inline-block; vertical-align:top;}
 #section1 .banner .text-area {position:relative;width:100%;text-align:center;margin-top: calc(100vw * 350 / 1920);}
 #section1 .banner .text-area .title{opacity: 0; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 110 /1920); font-weight: 700; line-height:calc(100vw * 160 /1920); color:#ffffff;}
@@ -46,11 +52,21 @@ header nav .right .alarm img {margin-top: calc(100vw * -2 /1920); width:calc(100
 #section1 .banner .text-area ul li {opacity: 0; }
 #section1 .banner .text-area ul li:last-child {margin-left: calc(100vw * -95 / 1920);}
 #section1 .banner .text-area ul li a {text-align: center; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 18 /1920); font-weight: 400; line-height:calc(100vw * 26 / 1920); color:#ffffff; text-decoration: underline;}
+#section1 .banner .video-btn {display: flex; float: right; margin-top: calc(100vw * 190 /1920); margin-right: calc(100vw * 40 /1920); z-index: 100; position: relative;}
+#section1 .banner #play-button {margin-left: calc(100vw * -40 /1920);  }
+#section1 .banner .pauseBtn img {width:calc(100vw * 40 /1920); height: calc(100vw * 40 /1920);}
+#section1 .banner .playBtn img {width:calc(100vw * 40 /1920); height: calc(100vw * 40 /1920);}
+
+#play-button {display: none;}
+#play-button.play {display: block;}
+#pause-button.play {display: none;}
+
+
 
 /* ---- sticky ---- */
 section {width: 100%; height: 100vh; position: relative;}
 .sticky {position: sticky !important; top: 0 !important; left: 0 !important; right: 0 !important;}
-#section1 .whiteBlock {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #fff; opacity: 0;}
+/* #section1 .whiteBlock {width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: #fff; opacity: 0;} */
 
 /* ---- section2 ---- */
 #section2 {height:calc(100vw * 1800 /1920); background-color: #ffffff;}
@@ -64,9 +80,9 @@ section {width: 100%; height: 100vh; position: relative;}
 #section2 .image-area .A2 img{margin-top: calc(100vw * -70 / 1920); margin-left: calc(100vw * 700 / 1920); width:calc(100vw * 800 / 1920); height: calc(100vw * 700 / 1920);}
 #section2 .image-area img:nth-child(3){width: calc(100vw * 400 / 1920);}
 
-#section2 .swiper {  position: relative; float: right; margin-top: calc(100vw * -350/ 1920);width: calc(100vw * 1920 / 1920); height: calc(100vw * 680 / 1920);}
+#section2 .swiper {position: relative; float: right; margin-top: calc(100vw * -350/ 1920);width: calc(100vw * 1920 / 1920); height: calc(100vw * 680 / 1920);}
 #section2 .swiper-pagination-bullet {width: 60px;height: 4px;border-radius: 0;margin-left: 10px;}
-#section2 .swiper.fixed{position: fixed; top: 0; left: 0; margin-top: calc(100vw * 505 / 1920);}
+#section2 .swiper.fixed{position: fixed; top: 0; left: 0; margin-top: calc(100vw * 420 / 1920);}
 #section2 .swiper.absolute{position: absolute; margin-top: calc(100vw * 550 / 1920);}
 #section2 .swiper .swiper-wrapper{width: 100vw; height: 100vh; position: relative;}
 #section2 .swiper .swiper-wrapper p{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 100px; color: white; transition: .5s;}
@@ -75,9 +91,18 @@ section {width: 100%; height: 100vh; position: relative;}
 
 /* ---- section3 ---- */
 #section3 {height: calc(100vw * 436 /1920); width: 100%; background-color: #000000;}
-#section3 .text-area {margin-top: calc(100vw * -265 /1920); display: flex; justify-content: center; z-index: 3;}
-#section3 .text-area p {font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 80 /1920); font-weight: 700; line-height: calc(100vw * 97 /1920); color:#ffffff; }
-#section3 .image-area img {height: calc(100vw * 436 /1920);}
+#section3 .background .img {overflow: hidden; }
+#section3 .background img {transition: all ease-in-out 0.3s;} 
+#section3:hover .background img {transform: scale(1.2);}
+#section3:hover .text-area {transform: scale(1);}
+#section3:hover .image-area {transform: scale(1);}
+#section3 .text-area {transition: all ease-in-out 0.3s;margin-left: calc(100vw * 90 /1920); margin-top: calc(100vw * -435 /1920); z-index: 3;}
+#section3 .text-area p {margin-top: calc(100vw * 0 /1920); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 20 /1920); font-weight: 400; line-height: calc(100vw * 32 /1920); color:#000000; }
+#section3 .text-area h1 {margin-top: calc(100vw * 15 /1920); font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 60 /1920); font-weight: 700; line-height: calc(100vw * 73 /1920); color:#DD001A; }
+#section3 .text-area .btn {margin-top: calc(100vw * 15 /1920); }
+#section3 .text-area a {font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 18 /1920); font-weight: 400; line-height:calc(100vw * 26 / 1920); color:#000000; text-decoration: underline;}
+#section3 .image-area {transition: all ease-in-out 0.3s; float: right; margin-right: calc(100vw * -450 /1920); margin-top: calc(100vw * -365 /1920); z-index: 10;}
+#section3 .image-area img {transform: scale(1); transition: all ease-in-out 0.3s; width:  calc(100vw * 1271 /1920); height: calc(100vw * 298 /1920);}
 
 /* ---- section4 ---- */
 #section4 {height: calc(100vw * 1080 /1920); width: 100%; background-color: #F8F8F8; display: flex;}
@@ -102,8 +127,9 @@ section {width: 100%; height: 100vh; position: relative;}
 #section5 .box-area .box-item:nth-child(2) {margin-left: calc(100vw * 20 /1920);}
 #section5 .box-area .box-item .image-area {overflow: hidden; width: calc(100vw * 910 /1920); height: calc(100vw * 360 /1920);}
 #section5 .box-area .box-item .image-area img {transition: all ease-in-out 0.3s;}
-/* #section5 .box-area .box-item:hover .image-area .img img {transform: scale(1.2); } */
-#section5 .box-area .box-item .text-area {margin-top: calc(100vw * -200 /1920); margin-left: calc(100vw * 70 /1920);}
+#section5 .box-area .box-item:hover .image-area .img img {transform: scale(1.2); }
+#section5 .box-area .box-item:hover .text-area {transform: scale(1); }
+#section5 .box-area .box-item .text-area {transition: all ease-in-out 0.3s; margin-top: calc(100vw * -200 /1920); margin-left: calc(100vw * 70 /1920);}
 #section5 .box-area .box-item .text-area a {font-family: 'Noto Sans KR', sans-serif; font-size: calc(100vw * 36 /1920); font-weight: 700; line-height:calc(100vw * 52 /1920);  color:#FFFFFF;}
 #section5 .box-area .box-item .text-area img {width:calc(100vw * 13 /1920); height: calc(100vw * 22 /1920); margin-left: calc(100vw * 10 /1920); margin-top: calc(100vw * -4 /1920);}
 
@@ -111,28 +137,25 @@ section {width: 100%; height: 100vh; position: relative;}
 #section6 {width: 100%; height: calc(100vw * 2000 /1920); background-color: #ffffff; position: relative;}
 #section6 .box-banner {padding-top: calc(100vw * 0 /1920);}
 #section6 .box-banner .image-area {width: 100%; height: calc(100vw * 740 /1920);}
-#section6 .box-banner .text-area h1 {font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 80 /1920); font-weight: 700; line-height: calc(100vw * 97 /1920); color:#ffffff;}
-#section6 .box-banner .text-area h2 {margin-top: calc(100vw * 65 /1920); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 36 /1920); font-weight: 600; line-height: calc(100vw * 32 /1920); color:#ffffff;}
-#section6 .box-banner .text-area p {margin-top: calc(100vw * 17 /1920); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 20 /1920); font-weight: 400; line-height: calc(100vw * 32 /1920); color:#ffffff;}
-#section6 .box-banner .text-area .img img {margin-top: calc(100vw * 145 /1920); width:calc(100vw * 364 /1920); height: calc(100vw * 70 /1920);}
-#section6 .box-banner .text-area .more-btn {margin-top: calc(100vw * 35 /1920);}
-#section6 .box-banner .text-area a {text-align: center; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 18 /1920); font-weight: 400; line-height:calc(100vw * 26 / 1920); color:#ffffff; text-decoration: underline;}
-
 #section6 .box-banner.fixed{position: fixed; top: 0; left: 0; z-index: 0;}
 #section6 .box-banner.absolute{position: absolute; bottom: 0; left: 0; z-index: 0;}
 #section6 .box-banner .bannerContainer .text-area.absolute{position: absolute; opacity: 100;}
 #section6 .box-banner .bannerContainer{width: 100vw; height: 100vh; position: relative;}
-#section6 .box-banner .bannerContainer .image-area img{position: absolute; top: 50%; transform: translateY(-50%); width: 100vw; height: 400px; object-fit: cover; transition: .5s;}
+#section6 .box-banner .bannerContainer .image-area img{position: absolute; top: 50%; transform: translateY(-50%); margin-left: calc(100vw * 40 /1920); width: calc(100vw * 1840 /1920); height: calc(100vw * 370 /1920); object-fit: cover; transition: .5s;}
 /* #section6 .box-banner .bannerContainer .text-area {opacity: 0;} */
 #section6 .box-banner .bannerContainer .text-area {object-fit: cover; transition: .5s; margin-top: calc(100vw * -480 /1920); margin-left: calc(100vw *  520 /1920); display: inline-block; justify-content: center; text-align: center; z-index: 100;}
 #section6 .box-banner .bannerContainer .text-area h1 {font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 80 /1920); font-weight: 700; line-height: calc(100vw * 97 /1920); color:#ffffff;}
+#section6 .box-banner .bannerContainer .text-area .img img {margin-top: calc(100vw * 53 /1920); width:calc(100vw * 364 /1920); height: calc(100vw * 70 /1920);}
 #section6 .box-banner .bannerContainer .text-area h2 {margin-top: calc(100vw * 65 /1920); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 36 /1920); font-weight: 600; line-height: calc(100vw * 32 /1920); color:#ffffff;}
 #section6 .box-banner .bannerContainer .text-area p {margin-top: calc(100vw * 17 /1920); font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 20 /1920); font-weight: 400; line-height: calc(100vw * 32 /1920); color:#ffffff;}
-#section6 .box-banner .bannerContainer .text-area .img img {margin-top: calc(100vw * 145 /1920); width:calc(100vw * 364 /1920); height: calc(100vw * 70 /1920);}
 #section6 .box-banner .bannerContainer .text-area .more-btn {margin-top: calc(100vw * 35 /1920);}
 #section6 .box-banner .bannerContainer .text-area a {text-align: center; font-family: 'Noto Sans KR', sans-serif; font-size:calc(100vw * 18 /1920); font-weight: 400; line-height:calc(100vw * 26 / 1920); color:#ffffff; text-decoration: underline;}
-
-#section6 .box-banner .thumbnail p {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 100px; color: white; z-index: 100;transition: .5s;font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 80 /1920); font-weight: 700; line-height: calc(100vw * 97 /1920); color:#ffffff;}
+#section6 .box-banner .bannerContainer .video-area {margin-top: calc(100vw * -700 /1920);}
+#section6 .box-banner .bannerContainer .video-area iframe {position: absolute; top: 50%; transform: translateY(-50%); width: 100vw; object-fit: cover; transition: .5s; width:  calc(100vw * 1920 /1920); height: calc(100vw * 1080 /1920);}
+#section6 .box-banner .thumbnail {z-index: 100; transition: 0.5s;}
+#section6 .box-banner .thumbnail .img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);z-index: 100;}
+#section6 .box-banner .thumbnail .img img { margin-top: calc(100vw * -63 /1920); height: calc(100vw * 86 /1920); width: calc(100vw * 454 /1920);}
+#section6 .box-banner .thumbnail p {margin-top: calc(100vw * 65 /1920); position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; z-index: 100;transition: .5s;font-family: 'Montserrat', sans-serif; font-size:calc(100vw * 30 /1920); font-weight: 400; line-height: calc(100vw * 37 /1920); color:#ffffff;}
 
 /* ---- footer ---- */
 #footer {height: calc(100vw * 305 /1920); width: 100%; background-color: #1D1D1D; display: flex;}

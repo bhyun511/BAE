@@ -92,3 +92,18 @@
     transform: translateY(0px);
   }
 }
+
+.up7 {
+  animation: car 1s forwards;
+  animation-delay: 0.2s;
+}
+@keyframes car {
+  from {
+    opacity: 100%;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(-500px);
+  }
+}
