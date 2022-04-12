@@ -168,7 +168,6 @@ $('#play-button').on('click', function(){
   });
 })(jQuery);
 
-
 /* ---- Sticky ---- */
 var opacity = 0;
 function scrollOpacityChange(e) {
@@ -187,6 +186,81 @@ function scrollOpacityChange(e) {
   };
 };
 window.addEventListener("mousewheel", scrollOpacityChange);
+
+/* ---- section2 text ---- */
+$(document).ready(function() {
+  let $Swiper1 = $('#section2 .image-area .swiper-slide:nth-child(1)');
+  let $Swiper2 = $('#section2 .image-area .swiper-slide:nth-child(2)');
+  let $Swiper3 = $('#section2 .image-area .swiper-slide:nth-child(3)');
+  let $Swiper4 = $('#section2 .image-area .swiper-slide:nth-child(4)');
+
+  let $Swipertxt1 = $('#section2 .text-area:nth-child(1)');
+  let $Swipertxt2 = $('#section2 .text-area:nth-child(2)');
+  let $Swipertxt3 = $('#section2 .text-area:nth-child(3)');
+  let $Swipertxt4 = $('#section2 .text-area:nth-child(4)');
+
+  $Swipertxt2.addClass('none');
+  $Swipertxt3.addClass('none');
+  $Swipertxt4.addClass('none');
+  
+  $Swiper1.hover(() => {
+    $Swipertxt1.css({
+      'opacity':'100%'        
+    })
+    $Swipertxt2.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt3.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt4.css({
+      'opacity':'0%'        
+    })
+  })
+  $Swiper2.hover(() => {
+    $Swipertxt1.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt2.css({
+      'opacity':'100%'        
+    })
+    $Swipertxt3.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt4.css({
+      'opacity':'0%'        
+    })
+  })
+  $Swiper3.hover(() => {
+    $Swipertxt1.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt2.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt3.css({
+      'opacity':'100%'        
+    })
+    $Swipertxt4.css({
+      'opacity':'0%'        
+    })
+  })
+  $Swiper4.hover(() => {
+    $Swipertxt1.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt2.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt3.css({
+      'opacity':'0%'        
+    })
+    $Swipertxt4.css({
+      'opacity':'100%'        
+    })
+  })
+});
+
 
 /* ---- scroll ---- */  
 function mainScrollEvent() {
@@ -419,57 +493,148 @@ $(window).scroll(function () {
   BannerScrollEvent();
 })
 
+/* ---- button ---- */
+$('.moreBtn1').hover(() => {
+  $(this).addClass('none');
+  $('.moreBtn2').addClass('block');
+});
+
+$('.moreBtn2').hover(() => {
+  $(this).removeClass('block');
+  $('.moreBtn1').removeClass('none');
+});
+
 /* ---- section3 car ---- */
 $(document).ready(function() {
   let section3 = jQuery('#section3');
   let $car = $('#section3 .image-area img');
+  let $desc = $('#section3 .text-area p');
+  let $titel = $('#section3 .text-area h1');
+  let $btn = $('#section3 .text-area a');
 
+  $desc.addClass('none');
+  $titel.addClass('none');
+  $btn.addClass('none');
+  
   section3.hover(() => {
+    $desc.addClass('up1');
+    $titel.addClass('up2');
+    $btn.addClass('up3');
     $car.addClass('up7');
     console.log("차")
   })
 });
 
 /* ---- section4 box ---- */
-$(document).ready(function() {
+function sct4ScrollEvent() {
+
   let documentHeight = $(document).scrollTop();
-  let section4Top = jQuery('#section4').offset().top;
-  let section4 = jQuery('#section4');
+  let section3Top = jQuery('#section3').offset().top;
   let $titel = $('#section4 .text-area h1');
   let $desc = $('#section4 .text-area p');
   let $slide1 = $('#section4 ul li:nth-child(1)');
   let $slide2 = $('#section4 ul li:nth-child(2)');
   let $slide3 = $('#section4 ul li:nth-child(3)');
 
-  // section4.hover(() => {
-  //   $titel.addClass('up1');
-  //   $desc.addClass('up2');
-  //   $slide1.addClass('up3');
-  //   $slide2.addClass('up4');
-  //   $slide3.addClass('up5');
-  //   console.log("4에 닿음")
-  // })
-});
+if (documentHeight >= section3Top){
+  $titel.addClass('up1');
+  $desc.addClass('up2');
+  $slide1.addClass('up3');
+  $slide2.addClass('up4');
+  $slide3.addClass('up5');
+  console.log("3에 닿음")    
+} else {
+  $titel.addClass('none');
+  $desc.addClass('none');
+  $slide1.addClass('none');
+  $slide2.addClass('none');
+  $slide3.addClass('none');
+}
+}
 
+$(window).scroll(function () {
+  sct4ScrollEvent();
+})
 
-// /* ---- section5 box ---- */
-// $(document).ready(function() {
-//   let documentHeight = $(document).scrollTop();
-//   let section5Top = jQuery('#section5').offset().top;
-//   let $titel = $('#section5 .text-area .title');
-//   let $desc = $('#section5 .text-area .desc');
-//   let $moreBtn = $('#section5 .text-area .more-btn');
-//   let $li1 = $('#section5 .text-area ul li:nth-child(1)');
-//   let $li2 = $('#section5 .text-area ul li:nth-child(2)');
+/* ---- section5 box ---- */
+function sct5ScrollEvent() {
 
-//   if (documentHeight >= section5Top-300){
-//     $titel.addClass('up1');
-//     $desc.addClass('up2');
-//     $moreBtn.addClass('up3');
-//     $li1.addClass('up4');
-//     $li2.addClass('up5');
-//   }
-// });
+  let documentHeight = $(document).scrollTop();
+  let section4Top = jQuery('#section4').offset().top;
+  let $boxl = $('#section5 .box-area .box-item:nth-child(1)');
+  let $box2 = $('#section5 .box-area .box-item:nth-child(2)');
+
+if (documentHeight+100 >= section4Top+200){
+  $boxl.addClass('up1');
+  $box2.addClass('up2');
+  console.log("4에 닿음")    
+} else {
+  $boxl.addClass('none');
+  $box2.addClass('none');
+}
+}
+
+$(window).scroll(function () {
+  sct5ScrollEvent();
+})
+
+/* ---- cursor ---- */  
+// // cursor dot(pointer)
+// // cursor bg(흰색 원)
+// // progress (가이드 문구)
+
+// var cursorDotEl = document.querySelector('#cursor-dot');
+// var cursorBGEl = document.querySelector('#cursor-bg');
+// var progressEl = document.querySelector('#progress');
+
+// var btnListItemEl = document.querySelectorAll('#section4');
+// var sec2 = document.querySelectorAll('#section2');
+
+// function onMoveWindow(e){
+//     // console.log(e.pageX, e.pageY, e.clientX, e.clientY);
+//     var posX = e.clientX;
+//     var posY = e.clientY;
+
+//     gsap.killTweensOf(cursorDotEl);
+//     // 현재 값에서 arg 의 속성에 따라 애니메이션 적용
+//     // duration - 시간
+//     // gsap.to(element, args{})
+//     gsap.to(cursorDotEl, {top: posY, left: posX, duration: 0.1, ease: 'sine.inOut'});
+//     gsap.killTweensOf(cursorBGEl);
+//     gsap.to(cursorBGEl, {top: posY, left: posX, duration: 0.2});
+//     gsap.killTweensOf(progressEl);
+//     gsap.to(progressEl, {top: posY, left: posX, duration: 0.25});
+// }
+
+// function onEnterBtnListItenEl(){
+//     console.log('enter');
+//     if(!cursorBGEl.classList.contains('active')){
+//         cursorBGEl.classList.add('active');
+//     }
+// }
+
+// function onLeaveBtnListItenEl(){
+//     console.log('leave');
+//     if(cursorBGEl.classList.contains('active')){
+//         cursorBGEl.classList.remove('active');
+//     }
+// }
+
+// function addEvent(){
+//     // window mouse event
+//     window.addEventListener('mousemove', onMoveWindow);
+//     // mouse event
+//     for(var i = 0; i < btnListItemEl.length; i++){
+//         btnListItemEl[i].addEventListener('mouseenter', onEnterBtnListItenEl);
+//         btnListItemEl[i].addEventListener('mouseleave', onLeaveBtnListItenEl);
+//     }
+// }
+
+// function init(){
+//     addEvent();
+// }
+// init();
+
 
 /* ---- scroll ---- */  
 /* 

@@ -1,21 +1,34 @@
+.none {
+  opacity: 0%;
+}
+.block {
+  opacity: 100%;
+}
+
 .color1 {
   animation: color1 1s forwards;
 }
 .color2 {
   animation: color2 1s forwards;
+  animation-delay: 1s;
 }
 .color3 {
-  animation: color3 1s forwards;
+  animation: color1 1s forwards;
+  animation-delay: 1s;
 }
 .color4 {
-  animation: color4 1s forwards;
+  animation: color2 1s forwards;
+  animation-delay: 2s;
 }
 .color5 {
-  animation: color4 1s forwards;
+  animation: color1 1s forwards;
+  animation-delay: 2s;
 }
+
+
 @keyframes color1 {
   from {
-      color:#e8e8e8;
+    color:#e8e8e8;
   }
   to {
     color:#000000;
@@ -27,33 +40,6 @@
   }
   to {
     color:#e8e8e8;
-  }
-}
-
-@keyframes color3 {
-  from {
-      color:#e8e8e8;
-  }
-  to {
-    color:#000000;
-  }
-}
-
-@keyframes color4 {
-  from {
-      color:#000000;
-  }
-  to {
-    color:#e8e8e8;
-  }
-}
-
-@keyframes color5 {
-  from {
-      color:#e8e8e8;
-  }
-  to {
-    color:#000000;
   }
 }
 
@@ -100,10 +86,10 @@
 @keyframes car {
   from {
     opacity: 100%;
-    transform: translateX(0px);
+    transform: translateX(calc(100vw * 0 / 1920));
   }
   to {
     opacity: 100%;
-    transform: translateX(-500px);
+    transform: translateX(calc(100vw * -500 / 1920));
   }
 }
