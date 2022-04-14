@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.js-drag-slider {
+  width: 100vw;
+}
+
+.js-drag-slider-content,
+.js-drag-slider-inner {
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: no-wrap;
+}
+
+.drag-slide {
+  width: 28.5714285716vw;
+  display: flex;
+  padding: 0 3.5714285715vw;
+}
+
+.drag-slide img {
+  width: 100%;
+  display: flex;
+}
+
+.drag-slider figure {
+  width: 100%;
+  display: flex;
+}
+
+.proxy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
