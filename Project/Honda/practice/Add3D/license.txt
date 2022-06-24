@@ -1,8 +1,0 @@
-Model Information:
-* title:	Honda HR-V 2022
-* source:	https://sketchfab.com/3d-models/honda-hr-v-2022-d448457840894bb49b0db7cb63c703e9
-* author:	SQUIR3D (https://sketchfab.com/SQUIR3D)
-
-Model License:
-* license type:	SKETCHFAB Editorial (https://sketchfab.com/licenses)
-* requirements:	Use only in connection with events that are newsworthy or of public interest
